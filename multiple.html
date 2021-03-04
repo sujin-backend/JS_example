@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for문을 사용해 구구단 출력하기</title>
+		<script>
+			var mtp = new Array(new Array(9),new Array(9),
+								new Array(9),new Array(9),
+								new Array(9),new Array(9),
+								new Array(9),new Array(9),
+								new Array(9));
+			for(var i=0; i<9; i++){
+				for(var j=0; j<9; j++){
+					mtp[i][j]=(i+1)*(j+1);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border = "1">
+			<script>
+				for(var i=0; i<10; i++){
+					document.write("<tr>");
+						for(var j=1; j<10; j++){
+							if(i==0){
+								document.write("<th>"+j+"단</th>");
+							}else{
+								document.write("<td>");
+								document.write(j+"*"+i+"="+mtp[i-1][j-1]);
+								document.write("</td>");
+							}
+						}
+					document.write("<tr>");
+				}
+			</script>
+		</table>
+	</body>
+</html>
